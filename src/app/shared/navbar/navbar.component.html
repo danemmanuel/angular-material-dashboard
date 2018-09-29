@@ -10,9 +10,29 @@
       </mat-form-field>
       <button mat-mini-fab class="search-btn"><i class="material-icons" style="font-size:18px;">search</i></button>
       <button mat-icon-button><i class="material-icons icon-btn">dashboard</i></button>
-      <app-msgiconbtn icon="notifications" number="5" [matMenuTriggerFor]="menu"></app-msgiconbtn>
-      <button mat-icon-button><i class="material-icons icon-btn">person</i></button>
-      <mat-menu #menu="matMenu">
+      <app-msgiconbtn icon="notifications" number="5" [matMenuTriggerFor]="notification"></app-msgiconbtn>
+
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <i class="material-icons icon-btn">account_circle</i>
+      </button>
+
+        <mat-menu #menu="matMenu">    
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voicemail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+
+        
+      <mat-menu #notification="matMenu">
         <button mat-menu-item>Mike John responded to your email</button>
         <button mat-menu-item>You have 5 new tasks</button>
         <button mat-menu-item>You're now friend with Andrew</button>

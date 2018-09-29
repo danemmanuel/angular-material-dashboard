@@ -11,11 +11,12 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 })
 export class TableComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  
   @ViewChild(MatSort) sort: MatSort;
-
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
+  
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
