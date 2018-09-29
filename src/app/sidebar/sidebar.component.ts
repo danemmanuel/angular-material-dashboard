@@ -8,11 +8,13 @@ import { ROUTES } from './sidebar-routes.config';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
-  public color: string;
+
+  public color: string = '#000';
   public menuItems: object;
   public activeFontColor: string;
   public normalFontColor: string;
   public dividerBgColor: string;
+
   constructor(public settingsService: SettingsService) {
     this.menuItems = ROUTES;
     this.activeFontColor = 'rgba(0,0,0,.6)';
@@ -22,8 +24,10 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit() {
     this.color = this.settingsService.getSidebarFilter();
+    console.log(this.color)
     this.settingsService.sidebarFilterUpdate.subscribe((filter: string) => {
       this.color = filter;
+      
       if (filter === '#fff') {
         this.activeFontColor = 'rgba(0,0,0,.6)';
       }else {
@@ -31,6 +35,7 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     });
     this.settingsService.sidebarColorUpdate.subscribe((color: string) => {
+      
       if (color === '#fff') {
         this.normalFontColor = 'rgba(0,0,0,.6)';
         this.dividerBgColor = 'rgba(0,0,0,.1)';

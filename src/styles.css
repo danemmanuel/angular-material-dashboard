@@ -18,7 +18,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, button, div, label, small {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 300;
+  font-weight: 700;
   /*line-height: 1.5em;*/
   margin: 0;
 }
@@ -547,5 +547,5 @@ table.mat-table{
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ccc; 
+  background: rgb(87, 87, 87); 
 }

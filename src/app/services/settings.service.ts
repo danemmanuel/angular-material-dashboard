@@ -6,15 +6,23 @@ export class SettingsService {
   public sidebarImageIndexUpdate: EventEmitter<number> = new EventEmitter();
   public sidebarFilter = '#fff';
   public sidebarFilterUpdate: EventEmitter<string> = new EventEmitter();
-  public sidebarColor = '#D80B0B';
+  public sidebarColor = localStorage.getItem("bgColor");
   public sidebarColorUpdate: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
-  getSidebarImageIndex(): number {
-    return this.sidebarImageIndex;
+  getSidebarImageIndex() {
+   let bgId : any
+   bgId = parseFloat(localStorage.getItem("bgImg"))
+   if(bgId=== null){
+      bgId = 0
+   }else{
+      bgId = bgId
+   }
+    return bgId
   }
   setSidebarImageIndex(id) {
+   localStorage.setItem(id,"bgImg")
     this.sidebarImageIndex = id;
     this.sidebarImageIndexUpdate.emit(this.sidebarImageIndex);
   }
@@ -26,6 +34,9 @@ export class SettingsService {
     this.sidebarFilterUpdate.emit(this.sidebarFilter);
   }
   getSidebarColor(): string {
+     if(this.sidebarColor === null){
+      this.sidebarColor = "#301BA4"
+     }
     return this.sidebarColor;
   }
   setSidebarColor(color: string) {

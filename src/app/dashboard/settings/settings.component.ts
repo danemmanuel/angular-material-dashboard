@@ -17,6 +17,7 @@ export class SettingsComponent implements OnInit {
   }
 
   bgChooseClick(id) {
+   localStorage.setItem("bgImg", id);
     this.settingService.setSidebarImageIndex(id);
     const sidebarImgs: HTMLCollection = document.getElementsByClassName('sidebar-img');
     for (let i = 0; i < sidebarImgs.length; i++) {
@@ -26,10 +27,12 @@ export class SettingsComponent implements OnInit {
   }
 
   filterChooseClick(color) {
+   localStorage.setItem("bgFilter", color);
     this.settingService.setSidebarFilter(color);
   }
 
   bgColorChooseClick(color) {
+   localStorage.setItem("bgColor", color);
     this.settingService.setSidebarColor(color);
   }
 }
