@@ -9,7 +9,8 @@
 
 
 .logo img{
-  width: 42px;
+  width: 40px;
+  margin-right: 5px;
 }
 
 .divider{
@@ -111,3 +112,10 @@
 }
 
 
+.version{
+   font-size: 10px;
+    text-align: right;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
