@@ -1,33 +1,22 @@
 <div class="nav-bar">
   <div class="left-part">
-    <button mat-mini-fab id="nav-left-button"><i class="material-icons" style="font-size:18px;">more_vert</i></button>
-    <h4>{{ title }}</h4>
+    
+    <h4><i class="material-icons">{{ icon }}</i> {{ title }}</h4>
   </div>
   <div class="right-part">
     <div class="right-part" id="nav-right">
-      <mat-form-field color="#ff0000">
-        <input matInput type="search" placeholder="Search">
-      </mat-form-field>
-      <button mat-mini-fab class="search-btn"><i class="material-icons" style="font-size:18px;">search</i></button>
-      <button mat-icon-button><i class="material-icons icon-btn">dashboard</i></button>
+      <!--
       <app-msgiconbtn icon="notifications" number="5" [matMenuTriggerFor]="notification"></app-msgiconbtn>
-
-      <button mat-icon-button [matMenuTriggerFor]="menu">
+      -->
+      <button mat-stroked-button [matMenuTriggerFor]="menu">
         <i class="material-icons icon-btn">account_circle</i>
+        Dan Vieira
       </button>
 
-        <mat-menu #menu="matMenu">    
+        <mat-menu #menu="matMenu">
           <button mat-menu-item>
-            <mat-icon>dialpad</mat-icon>
-            <span>Redial</span>
-          </button>
-          <button mat-menu-item disabled>
-            <mat-icon>voicemail</mat-icon>
-            <span>Check voicemail</span>
-          </button>
-          <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            <span>Disable alerts</span>
+            <mat-icon>trending_flat</mat-icon>
+            <span>Sair</span>
           </button>
         </mat-menu>
 

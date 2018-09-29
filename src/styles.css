@@ -520,11 +520,18 @@ table.mat-table{
 .nav-bar .icon-btn{
   font-size:25px !important;
 }
-
+.nav-bar h4{
+  display: flex;
+  align-items: center
+}
+.nav-bar h4 i{
+  margin-right: 10px;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
 }
+
 
 /* Track */
 ::-webkit-scrollbar-track {
