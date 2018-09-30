@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MatTableModule, MatIconModule, MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
+import { MatTableModule, MatSortModule, MatIconModule, MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
 import { MatPaginatorModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -72,7 +72,8 @@ import { WizardComponent } from './dashboard/component/wizard/wizard.component';
     MatCheckboxModule,
     MatTableModule,
     MatPaginatorModule,
-    MatIconModule
+    MatIconModule,
+    MatSortModule
   ],
   providers: [SettingsService,  UserService],
   bootstrap: [AppComponent],

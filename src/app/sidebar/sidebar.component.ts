@@ -23,8 +23,8 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
+     
     this.color = this.settingsService.getSidebarFilter();
-    console.log(this.color)
     this.settingsService.sidebarFilterUpdate.subscribe((filter: string) => {
       this.color = filter;
       
