@@ -519,6 +519,7 @@ table.mat-table{
 }
 .nav-bar .icon-btn{
   font-size:25px !important;
+  color: inherit !important;
 }
 .nav-bar h4{
   display: flex;
