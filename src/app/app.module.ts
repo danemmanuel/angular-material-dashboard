@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
 import { MatTableModule, MatIconModule, MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
@@ -29,6 +30,8 @@ import { PriceTableComponent } from './dashboard/component/pricetable/pricetable
 import { PanelsComponent } from './dashboard/component/panels/panels.component';
 
 import { SettingsService } from './services/settings.service';
+import { UserService } from './shared/user/user.service';
+
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 
 @NgModule({
@@ -58,6 +61,7 @@ import { WizardComponent } from './dashboard/component/wizard/wizard.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     HttpModule,
     routing,
     BrowserAnimationsModule,
@@ -70,7 +74,7 @@ import { WizardComponent } from './dashboard/component/wizard/wizard.component';
     MatPaginatorModule,
     MatIconModule
   ],
-  providers: [SettingsService],
+  providers: [SettingsService,  UserService],
   bootstrap: [AppComponent],
   entryComponents :[
     TableComponent

@@ -10,7 +10,7 @@
       -->
       <button mat-stroked-button [matMenuTriggerFor]="menu">
         <i class="material-icons icon-btn">account_circle</i>
-        Dan Vieira
+        {{user? user.name: ''}}
       </button>
 
         <mat-menu #menu="matMenu">
