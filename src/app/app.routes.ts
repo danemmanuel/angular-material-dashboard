@@ -11,6 +11,7 @@ import { SettingsComponent } from './dashboard/settings/settings.component';
 import { PriceTableComponent } from './dashboard/component/pricetable/pricetable.component';
 import { PanelsComponent} from './dashboard/component/panels/panels.component';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
+import { FormularioComponent } from './dashboard/formulario/formulario.component';
 
 import { RootComponent } from './dashboard/root/root.component';
 import { LoginComponent } from './page/login/login.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'profile', component: ProfileComponent},
     {path: 'table', component: TableComponent},
+    {path: 'formulario', component: FormularioComponent},
     {path: 'notification', component: NotificationComponent},
     {path: 'alert', component: SweetAlertComponent},
     {path: 'settings', component: SettingsComponent},

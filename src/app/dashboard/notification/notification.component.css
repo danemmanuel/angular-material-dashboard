@@ -9,3 +9,7 @@
 .place{
   padding: 20px;
 }
+.alert span{
+  font-size: 16px;
+  font-weight: 300;
+}

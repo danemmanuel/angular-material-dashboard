@@ -21,7 +21,7 @@ export class NotificationComponent implements OnInit {
     switch (position) {
       case 'top-left':
         align = 'left';
-        type = 'rose';
+        type = 'success';
         break;
       case 'top-center':
         align = 'center';
@@ -30,7 +30,7 @@ export class NotificationComponent implements OnInit {
       case 'bottom-left':
         align = 'left';
         from = 'bottom';
-        type = 'primary';
+        type = 'success';
         break;
       case 'bottom-center':
         align = 'center';
@@ -43,7 +43,7 @@ export class NotificationComponent implements OnInit {
         break;
     }
     $.notify({
-      message: 'Welcome to <b>MATERIAL DASHBOARD</b> - a beautiful dashboard for every web developer.',
+      message: '<b>Welcome to MATERIAL DASHBOARD- a beautiful dashboard for every web developer.</b> ',
     }, {
       placement: {from, align},
       offset: {x: 20, y: 35},

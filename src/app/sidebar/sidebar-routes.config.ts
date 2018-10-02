@@ -6,6 +6,7 @@ export const ROUTES = [
         {path: 'components/panels', title: 'Painéis', icon: 'P'},
         {path: 'components/wizard', title: 'Wizard', icon: 'W'},
       ]},
+    { path: 'formulario', title: 'Formulário', icon: 'assignment', children: null },
     { path: 'notification', title: 'Notificações', icon: 'notifications', children: null },
     { path: 'alert', title: 'Alertas', icon: 'warning', children: null },
     { path: 'settings', title: 'Configurações', icon: 'settings', children: null },

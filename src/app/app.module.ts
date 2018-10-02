@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MatTableModule, MatSortModule, MatIconModule, MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
+import { MatSlideToggleModule, MatSliderModule, MatSelectModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatTableModule, MatSortModule, MatIconModule, MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule, MatFormFieldModule } from '@angular/material';
 import { MatPaginatorModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -33,6 +33,7 @@ import { SettingsService } from './services/settings.service';
 import { UserService } from './shared/user/user.service';
 
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
+import { FormularioComponent } from './dashboard/formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -56,11 +57,15 @@ import { WizardComponent } from './dashboard/component/wizard/wizard.component';
     SettingsComponent,
     PriceTableComponent,
     PanelsComponent,
-    WizardComponent
+    WizardComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatDatepickerModule,
     HttpClientModule,
     HttpModule,
     routing,
@@ -73,7 +78,12 @@ import { WizardComponent } from './dashboard/component/wizard/wizard.component';
     MatTableModule,
     MatPaginatorModule,
     MatIconModule,
-    MatSortModule
+    MatSortModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatSliderModule,
+    MatSlideToggleModule
   ],
   providers: [SettingsService,  UserService],
   bootstrap: [AppComponent],
