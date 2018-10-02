@@ -35,7 +35,7 @@ export class SettingsService {
   }
   getSidebarColor(): string {
      if(this.sidebarColor === null){
-      this.sidebarColor = "#301BA4"
+      this.sidebarColor = "#AD1F22"
      }
     return this.sidebarColor;
   }

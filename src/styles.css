@@ -514,6 +514,9 @@ b{
 .mat-form-field{
   width:100%;
 }
+.sidebar-panel{
+   background-color:#AD1F22;
+}
 table.mat-table{
   width:100%;
 }
